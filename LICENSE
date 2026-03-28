@@ -1,0 +1,50 @@
+Rodent Manual Scorer — Non-Commercial Academic Licence
+Copyright (c) 2025 Diego Hassan Mediane, Anastasiades Lab, Cahill Lab
+
+========================================================================
+TERMS AND CONDITIONS
+========================================================================
+
+1. PERMITTED USES
+   You are free to:
+   - Use this software for personal, academic, and non-commercial research purposes.
+   - Copy and share this software, provided you include this licence and the
+     original copyright notice in full.
+   - Modify this software for your own non-commercial research, provided any
+     modified version is clearly labelled as such and is not misrepresented
+     as the original.
+
+2. PROHIBITED USES
+   You may NOT, under any circumstances:
+   - Sell, license, sublicense, or otherwise commercialise this software or
+     any derivative of it, whether as a standalone product or as part of a
+     commercial product or service.
+   - Use this software in any context where financial gain is the primary
+     purpose, including (but not limited to) paid consulting, proprietary
+     toolkits, or commercial software bundles.
+   - Remove or alter this licence, the copyright notice, or the citation
+     requirement from any copy or derivative of this software.
+
+3. MANDATORY CITATION
+   Any academic work (including journal articles, conference papers, theses,
+   preprints, and technical reports) that makes use of this software, or of
+   data produced using this software, MUST include the following citation:
+
+       Mediane, D. H. (2025). Rodent Manual Scorer [Software].
+       Anastasiades Lab & Cahill Lab.
+       https://github.com/diego-mediane/RodentManualScorer
+
+   Failure to cite constitutes a breach of this licence.
+
+4. NO WARRANTY
+   This software is provided "as is", without warranty of any kind, express
+   or implied, including but not limited to the warranties of merchantability,
+   fitness for a particular purpose, and non-infringement. In no event shall
+   the authors or copyright holders be liable for any claim, damages, or other
+   liability arising from the use of this software.
+
+5. GOVERNING PRINCIPLE
+   If you are unsure whether your intended use is permitted, contact the
+   author before proceeding.
+
+========================================================================
