@@ -6,7 +6,6 @@
 
 A free, open-source desktop tool for fast, precise, manual scoring of behaviour in video recordings.
 
-[![CI](https://github.com/diego-mediane/RodentManualScorer/actions/workflows/ci.yml/badge.svg)](https://github.com/diego-mediane/RodentManualScorer/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-555555)](#which-script-should-i-use)
 [![Licence](https://img.shields.io/badge/licence-Non--Commercial%20Academic-1f6feb)](LICENSE)
@@ -136,11 +135,11 @@ Citation is required for any published work that uses this software or data prod
 
 If the tool contributed to your analysis, please cite the paper in which it was used:
 
-> Mediane, D. H., [co-authors], Anastasiades, P. G., and Cahill, E. N. (2026). [Specific tasks expose constraints on social exploration and ultrasonic vocalisation production in male C57BL/6J mice]. *Behavioural Brain Research*, article 116300. https://doi.org/10.1016/j.bbr.2026.116300
+>Mediane, D. H., Anastasiades, P. G., and Cahill, E. N. (2026). Specific tasks expose constraints on social exploration and ultrasonic vocalisation production in male C57BL/6J mice. *Behavioural Brain Research*, 512, Article 116300. https://doi.org/10.1016/j.bbr.2026.116300
 
 ```bibtex
 @article{mediane2026,
-  author  = {Mediane, Diego Hassan. Anastasiades, Paul G. and Cahill, Emma N.},
+  author  = {Mediane, Diego Hassan and Anastasiades, Paul G. and Cahill, Emma N.},
   title   = {Specific tasks expose constraints on social exploration and ultrasonic vocalisation production in male C57BL/6J mice},
   journal = {Behavioural Brain Research},
   year    = {2026},
