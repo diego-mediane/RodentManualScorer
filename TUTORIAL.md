@@ -4,6 +4,8 @@ This tutorial walks you through a complete scoring session from start to finish.
 
 The example used here scores a rodent video for three behaviours: **Grooming**, **Freezing**, and **Rearing**. The exact behaviours and keys are fully customisable — use whatever fits your experiment.
 
+> New in version 2.0: a Live Scoring panel on the right lights up while you hold a key, you can score the same video across multiple sessions, every control has a tooltip, and an in-app tutorial is available by pressing `F1`.
+
 ---
 
 ## Overview of the workflow
@@ -244,3 +246,20 @@ Go to **View → Show History** to open a floating panel that logs every action 
 - Use slow playback (0.5×) for fast or subtle behaviours, especially on the first pass.
 - Score one behaviour type at a time across the full video if behaviours are hard to catch in real time, then combine the CSVs.
 - Keep the application window in focus (click on it) before pressing scoring keys — if a text box or dialog is open, key presses go there instead.
+
+
+---
+
+## Scoring the same video more than once (sessions)
+
+Each scoring pass is a session, shown in the Session dropdown on the right.
+
+To start another pass, click New Session. You choose either to start from scratch, which gives empty scores and rewinds the video to the beginning, or to continue from a copy of the current session, which duplicates the existing scores so you can build on them.
+
+Previous sessions are never discarded. Switch between them at any time using the dropdown to view or keep editing their scores. This is useful for blind re-scoring, inter-rater checks, or correcting a pass without touching the original.
+
+---
+
+## Getting help inside the app
+
+Hover the mouse over any button or control to see a short description of what it does. For a full walkthrough, open the Help menu and choose Tutorial, click the Tutorial button on the right, or press `F1`.

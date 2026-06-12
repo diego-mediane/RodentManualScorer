@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this software in your research, please cite it as below."
+message: "If you use this software in your research, please cite the paper below and, optionally, the software itself."
 type: software
 title: "Rodent Manual Scorer"
-version: "1.0.0"
-date-released: "2025-01-01"
+version: "2.0.0"
+date-released: "2026-06-12"
 url: "https://github.com/diego-mediane/RodentManualScorer"
 repository-code: "https://github.com/diego-mediane/RodentManualScorer"
 license: "LicenseRef-NonCommercial-Academic"
@@ -11,12 +11,13 @@ abstract: >
   Rodent Manual Scorer is a free, open-source desktop application for
   manual behavioural video scoring. Users assign keyboard keys to
   behaviours and hold them during playback to record millisecond-accurate
-  start times, end times, and durations. Results are exported to CSV or
-  Excel. Developed for use in neuroscience and behavioural research.
+  start times, end times and durations, across multiple scoring sessions.
+  Results are exported to CSV or Excel. Developed for neuroscience and
+  behavioural research.
 authors:
   - family-names: "Mediane"
     given-names: "Diego Hassan"
-    
+    affiliation: "University of Bristol"
 keywords:
   - behavioural scoring
   - video analysis
@@ -24,12 +25,20 @@ keywords:
   - rodent behaviour
   - manual annotation
   - ethology
+
 preferred-citation:
-  type: software
-  title: "Rodent Manual Scorer"
+  type: article
+  title: "Specific tasks expose constraints on social exploration and ultrasonic vocalisation production in male C57BL/6J miceF"
+  journal: "Behavioural Brain Research"
+  year: 2026
+  start: "116300"
+  doi: "10.1016/j.bbr.2026.116300"
+  url: "https://doi.org/10.1016/j.bbr.2026.116300"
   authors:
     - family-names: "Mediane"
       given-names: "Diego Hassan"
-      
-  year: 2025
-  url: "https://github.com/diego-mediane/RodentManualScorer"
+    # - add any middle authors here, in order
+    - family-names: "Anastasiades"
+      given-names: "Paul G."
+    - family-names: "Cahill"
+      given-names: "Emma N."
