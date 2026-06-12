@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="200" viewBox="0 0 760 200" role="img" aria-label="Rodent Manual Scorer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13233b"/>
+      <stop offset="1" stop-color="#0c1626"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39d353"/>
+      <stop offset="1" stop-color="#9ecbff"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="200" rx="18" fill="url(#bg)"/>
+  <rect x="0" y="184" width="760" height="16" rx="0" fill="url(#accent)" opacity="0.9"/>
+  <g transform="translate(48,56)">
+    <circle cx="34" cy="44" r="34" fill="none" stroke="#9ecbff" stroke-width="3"/>
+    <ellipse cx="34" cy="44" rx="20" ry="11" fill="#0c1626" stroke="#39d353" stroke-width="2.5"/>
+    <circle cx="20" cy="40" r="2.4" fill="#9ecbff"/>
+  </g>
+  <text x="150" y="92" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Rodent Manual Scorer</text>
+  <text x="152" y="126" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#9ecbff">Precise, keyboard-driven behavioural video scoring</text>
+</svg>
