@@ -65,7 +65,7 @@ conda install -c conda-forge pyqt -y
 ```
 
 ```bash
-pip install opencv-python numpy pandas openpyxl xlsxwriter
+pip install opencv-python-headless numpy pandas openpyxl xlsxwriter
 ```
 
 Wait for each command to finish before running the next.
@@ -115,9 +115,6 @@ Try a different video format. `.mp4` files encoded with H.264 work most reliably
 **The app asks me to enter FPS manually**
 Some video files do not store their frame rate. Check the video's properties (right-click → Get Info) and enter the correct FPS when prompted.
 
-**Permission denied when running the script**
-Run `chmod +x VideoTimer.py` in Terminal and try again.
-
 ---
 
 ## Updating
@@ -128,5 +125,5 @@ To update the Python packages:
 
 ```bash
 conda activate rms
-pip install --upgrade opencv-python numpy pandas openpyxl xlsxwriter
+pip install --upgrade opencv-python-headless numpy pandas openpyxl xlsxwriter
 ```

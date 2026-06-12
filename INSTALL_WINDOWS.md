@@ -65,7 +65,7 @@ conda install -c conda-forge pyqt -y
 ```
 
 ```bash
-pip install opencv-python numpy pandas openpyxl xlsxwriter
+pip install opencv-python-headless numpy pandas openpyxl xlsxwriter
 ```
 
 ---
@@ -143,5 +143,5 @@ To update the Python packages:
 
 ```bash
 conda activate rms
-pip install --upgrade opencv-python numpy pandas openpyxl xlsxwriter
+pip install --upgrade opencv-python-headless numpy pandas openpyxl xlsxwriter
 ```

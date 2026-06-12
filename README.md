@@ -25,6 +25,10 @@ It is designed to be simple enough for complete beginners while being precise en
 - 💾 **Autosave** — saves a recovery CSV every 5 minutes automatically
 - 📁 **Export** — save results as CSV or Excel (with Summary + Detailed sheets)
 - 🐛 **Drag & drop** — drag a video file directly onto the window
+- 🟢 **Live scoring panel** — the active behaviour lights up while you hold its key, with a running timer
+- 🗂️ **Multiple sessions** — score the same video several times and keep every pass; start fresh or continue a copy
+- 💬 **Tooltips everywhere** — hover any control for a short explanation
+- 📘 **Built-in tutorial** — press `F1` or click the Tutorial button for a step-by-step guide
 
 ---
 
@@ -49,8 +53,6 @@ The two scripts are functionally identical. The Windows version includes additio
 ---
 
 ## Staying Informed
-
-
 - ⭐ **Star this repository** — lets us see how many people are using the tool
 
 ---
@@ -69,7 +71,7 @@ The two scripts are functionally identical. The Windows version includes additio
   title        = {Rodent Manual Scorer},
   year         = {2025},
   url          = {https://github.com/diego-mediane/RodentManualScorer},
-  institution  = {Anastasiades Lab\& Cahill Lab},
+  institution  = {Anastasiades Lab \& Cahill Lab},
   note         = {Software for manual behavioural video scoring}
 }
 ```
