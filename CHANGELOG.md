@@ -14,8 +14,6 @@ The format is based on Keep a Changelog, and the project aims to follow semantic
 - Corrects CSV quoting on macOS for behaviour or phase names containing commas or quotation marks.
 - Clears stale undo/redo state and rebuilds event state when loading a scoring CSV.
 
-### Removed
-- Removed the legacy `VideoTimer_v1.py` and `VideoTimerWindows_v1.py` scripts because they contain the same held-key scoring bug.
 
 ## [2.0.0] - 2026-06-12
 
