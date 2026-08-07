@@ -14,6 +14,8 @@ The example used here scores a rodent video for three behaviours: **Grooming**, 
 Load video → Assign keys → Play & score → Save results
 ```
 
+Loading or reloading a video starts a clean Session 1. Saved key assignments are kept, but scored events from the previous video are not carried across.
+
 ---
 
 ## Part 1 — Opening the application
@@ -121,6 +123,10 @@ If you do not use phases, all events are automatically labelled as *Default Phas
 
 **You can score multiple behaviours simultaneously** by holding multiple keys at once.
 
+> **Video ending while a key is held:** the behaviour is saved automatically. Its end time is set to the exact video duration, so the final bout is included in the timeline, history, CSV and Excel output.
+
+> **Pause, stop, seek or session change while a key is held:** the active bout is closed at the current video position before the action is applied.
+
 ---
 
 ## Part 6 — Playback controls
@@ -201,11 +207,9 @@ To resume scoring a video from a previously saved CSV:
 
 ## Part 11 — Starting a new session
 
-To clear all data and start fresh (keeping key assignments):
-
 Go to **File → New Session** (or press `Ctrl+N`).
 
-You will be asked to confirm. This clears all scored events and timers but does not affect saved files.
+Choose **Start from scratch** for an empty scoring pass rewound to the beginning, or **Continue from a copy** to duplicate the current scores and continue from them. Previous sessions remain available in the Session dropdown, and saved files are not changed.
 
 ---
 

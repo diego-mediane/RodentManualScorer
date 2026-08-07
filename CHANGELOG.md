@@ -3,6 +3,18 @@
 All notable changes to this project are documented here.
 The format is based on Keep a Changelog, and the project aims to follow semantic versioning.
 
+## [2.0.1] - 2026-08-07
+
+### Fixed
+- Finalises a behaviour held when the video reaches the end, using the video duration as the bout end time so the event appears in the timeline, history, CSV and Excel output.
+- Finalises active bouts safely before pause, stop, timeline seeking, phase changes and session changes.
+- Prevents held-key state from leaking into a newly loaded video and resets scoring sessions whenever a video is loaded, preventing events from one recording carrying into another.
+- Corrects modified-key handling and key release when modifier keys are released in a different order.
+- Prevents application shortcuts such as save, load, undo and redo from being assigned as behaviour keys.
+- Corrects CSV quoting on macOS for behaviour or phase names containing commas or quotation marks.
+- Clears stale undo/redo state and rebuilds event state when loading a scoring CSV.
+
+
 ## [2.0.0] - 2026-06-12
 
 ### Added
@@ -17,7 +29,7 @@ The format is based on Keep a Changelog, and the project aims to follow semantic
 - Documentation and `requirements.txt` now use `opencv-python-headless` to avoid the Qt platform plugin conflict that could prevent the application from launching.
 
 ### Notes
-- The previous release remains available as `VideoTimer_v1.py` and `VideoTimerWindows_v1.py`.
+- The legacy scripts were retained in this release and were removed in version 2.0.1.
 
 ## [1.0.0]
 

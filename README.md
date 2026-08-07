@@ -6,6 +6,7 @@
 
 A free, open-source desktop tool for fast, precise, manual scoring of behaviour in video recordings.
 
+[![CI](https://github.com/diego-mediane/RodentManualScorer/actions/workflows/ci.yml/badge.svg)](https://github.com/diego-mediane/RodentManualScorer/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-555555)](#which-script-should-i-use)
 [![Licence](https://img.shields.io/badge/licence-Non--Commercial%20Academic-1f6feb)](LICENSE)
@@ -54,6 +55,7 @@ It is built to be simple enough for a first-time user and precise enough for rig
 | Video playback | Supports `.mp4`, `.avi`, `.mov`, `.mkv`, with drag-and-drop loading |
 | Custom key mapping | Bind any key to any behaviour |
 | Millisecond timing | Accurate start, end and duration for every event |
+| Safe bout finalisation | Held behaviours are closed cleanly at video end, pause, stop, seek and session changes |
 | Live scoring panel | The active behaviour lights up while its key is held, with a running on-screen timer |
 | Multiple sessions | Score the same video several times; start each pass fresh or continue a copy, and switch between passes without losing any |
 | Phases | Split a recording into named phases (for example Baseline, Treatment) shown as coloured bands on the timeline |
@@ -72,7 +74,7 @@ It is built to be simple enough for a first-time user and precise enough for rig
 | macOS | `VideoTimer.py` |
 | Windows | `VideoTimerWindows.py` |
 
-The two scripts are functionally identical. The Windows version adds handling for Windows-specific video backend quirks. The previous release is kept available as `VideoTimer_v1.py` and `VideoTimerWindows_v1.py`.
+The two scripts are functionally identical. The Windows version adds handling for Windows-specific video backend quirks.
 
 ---
 
@@ -95,6 +97,7 @@ pip install -r requirements.txt
 
 1. Launch the script for your operating system (see above).
 2. Load a video with `File > Load Video`, or drag a file onto the window.
+   Loading or reloading a video starts a clean Session 1 while keeping your saved key assignments.
 3. Click `Assign Keys` and bind a key to each behaviour.
 4. Press `Space` to play, and hold a behaviour key whenever that behaviour occurs.
 5. Save with `File > Save Scoring CSV`, or export to Excel.
@@ -135,11 +138,11 @@ Citation is required for any published work that uses this software or data prod
 
 If the tool contributed to your analysis, please cite the paper in which it was used:
 
->Mediane, D. H., Anastasiades, P. G., and Cahill, E. N. (2026). Specific tasks expose constraints on social exploration and ultrasonic vocalisation production in male C57BL/6J mice. *Behavioural Brain Research*, 512, Article 116300. https://doi.org/10.1016/j.bbr.2026.116300
+> Mediane, D. H., [co-authors], Anastasiades, P. G., and Cahill, E. N. (2026). [Specific tasks expose constraints on social exploration and ultrasonic vocalisation production in male C57BL/6J mice]. *Behavioural Brain Research*, article 116300. https://doi.org/10.1016/j.bbr.2026.116300
 
 ```bibtex
 @article{mediane2026,
-  author  = {Mediane, Diego Hassan and Anastasiades, Paul G. and Cahill, Emma N.},
+  author  = {Mediane, Diego Hassan. Anastasiades, Paul G. and Cahill, Emma N.},
   title   = {Specific tasks expose constraints on social exploration and ultrasonic vocalisation production in male C57BL/6J mice},
   journal = {Behavioural Brain Research},
   year    = {2026},
