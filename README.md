@@ -174,7 +174,7 @@ Released under a Non-Commercial Academic Licence. See [LICENSE](LICENSE) for the
 
 ## Acknowledgements
 
-Developed at the University of Bristol in the Anastasiades Lab and the Cahill Lab.
+Developed in the Anastasiades Lab and the Cahill Lab.
 
 ---
 
