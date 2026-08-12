@@ -1,147 +1,207 @@
-# Installation Guide — Windows
+# Rodent Manual Scorer — Windows installation
 
-This guide will take you from a fresh Windows PC to a working installation of **Rodent Manual Scorer**, even if you have never used Python before. Follow every step in order.
+This guide is written for users who do not normally use Python.
 
----
+## What you need
 
-## What you will install
+- Windows 10 or Windows 11
+- Internet access for the initial installation
+- The Rodent Manual Scorer repository downloaded from GitHub
+- Python 3.11 in an isolated environment
 
-| Software | Purpose |
-|---|---|
-| Anaconda | Manages Python and all required packages |
-| Python 3.11 | The programming language the tool runs on |
-| PyQt5, OpenCV, NumPy, pandas, openpyxl | Libraries the tool depends on |
+The Windows script is:
 
----
+`VideoTimerWindows.py`
 
-## Step 1 — Install Anaconda
+## 1. Download the project
 
-1. Open your browser and go to: **https://www.anaconda.com/download**
-2. Click **Download** — it will detect that you are on Windows automatically.
-3. Open the downloaded `.exe` installer.
-4. When asked about installation type, choose **"Just Me"** (recommended).
-5. On the **Advanced Options** screen, tick **"Add Anaconda3 to my PATH environment variable"**.
-   > This makes it possible to run Anaconda commands from the Anaconda Prompt.
-6. Complete the installation with all other defaults.
+On the GitHub repository page:
 
----
+1. Click **Code**
+2. Click **Download ZIP**
+3. Open the downloaded ZIP
+4. Extract the folder somewhere easy to find, for example your Desktop
 
-## Step 2 — Open the Anaconda Prompt
+GitHub may call the extracted folder `RodentManualScorer-main`. That is normal.
 
-1. Press the **Windows key** and type `Anaconda Prompt`.
-2. Click **Anaconda Prompt** (not PowerShell) from the search results.
-3. A black command window will open. This is where you will type all the commands below.
+## 2. Install Miniconda
 
-> **Tip:** Copy each command, right-click inside the Anaconda Prompt window to paste, and press `Enter` to run it.
+Download and install Miniconda for Windows from the official Anaconda/Miniconda website.
 
----
+During installation, use the normal recommended options.
 
-## Step 3 — Create a dedicated environment
+You do **not** need to add Anaconda/Miniconda manually to the Windows PATH.
+
+After installation, open **Anaconda Prompt** or **Miniconda Prompt** from the Start menu.
+
+## 3. Create a clean Python 3.11 environment
+
+In Anaconda Prompt/Miniconda Prompt, run:
 
 ```bash
-conda create -n rms python=3.11 -y
+conda create -n rms python=3.11 pip -y
 ```
 
-This creates a new isolated environment called `rms`. It may take a minute or two.
-
----
-
-## Step 4 — Activate the environment
+Then activate it:
 
 ```bash
 conda activate rms
 ```
 
-You will see `(rms)` appear at the start of your prompt. **You must do this every time you open a new Anaconda Prompt before running the tool.**
+You should now see `(rms)` near the start of the command line.
 
----
+You normally only create this environment once.
 
-## Step 5 — Install the required packages
+## 4. Go to the Rodent Manual Scorer folder
 
-Run these two commands one at a time, waiting for each to finish:
+In File Explorer:
 
-```bash
-conda install -c conda-forge pyqt -y
-```
+1. Open the extracted RodentManualScorer folder
+2. Click the address bar
+3. Copy the full folder path
 
-```bash
-pip install opencv-python-headless numpy pandas openpyxl xlsxwriter
-```
-
----
-
-## Step 6 — Download the tool
-
-1. Go to: **https://github.com/diego-mediane/RodentManualScorer**
-2. Click the green **Code** button → **Download ZIP**
-3. Open your **Downloads** folder, right-click the ZIP file, and select **Extract All**.
-4. Move the extracted folder somewhere easy to find, such as your **Desktop** or **Documents** folder.
-
----
-
-## Step 7 — Run the tool
-
-1. In the Anaconda Prompt, navigate to the folder you extracted. For example, if it is on your Desktop:
+Then in Anaconda Prompt type:
 
 ```bash
-cd C:\Users\YourUsername\Desktop\RodentManualScorer
+cd /d "PASTE-YOUR-FOLDER-PATH-HERE"
 ```
 
-Replace `YourUsername` with your actual Windows username.
+For example:
 
-2. Make sure your environment is active (you should see `(rms)` — if not, run `conda activate rms` first).
+```bash
+cd /d "C:\Users\YourName\Desktop\RodentManualScorer-main"
+```
 
-3. Run the tool:
+## 5. Install the required packages
+
+With `(rms)` active and the prompt inside the project folder, run:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Wait until installation finishes.
+
+## 6. Start Rodent Manual Scorer
+
+Run:
 
 ```bash
 python VideoTimerWindows.py
 ```
 
-The application window should open. You are ready to score.
+The application window should open.
 
----
+## Every time you want to use it later
 
-## Running the tool next time
-
-Every time you want to use the tool, open **Anaconda Prompt** and run:
+Open Anaconda Prompt or Miniconda Prompt and run:
 
 ```bash
 conda activate rms
-cd C:\Users\YourUsername\Desktop\RodentManualScorer
+```
+
+Go to the RodentManualScorer folder:
+
+```bash
+cd /d "C:\path\to\RodentManualScorer-main"
+```
+
+Then run:
+
+```bash
 python VideoTimerWindows.py
 ```
 
----
+## Supported video files
+
+The scorer accepts:
+
+- `.mp4`
+- `.avi`
+- `.mov`
+- `.mkv`
+
+The filename extension does not guarantee that Windows/OpenCV can decode the codec stored inside the file.
+
+If one recording does not open:
+
+1. Test a known-good `.mp4`
+2. If that works, convert a copy of the problematic video to a standard H.264 `.mp4`
+3. Keep the original recording unchanged
+
+## Windows security or antivirus warning
+
+Only use files downloaded from the official RodentManualScorer GitHub repository.
+
+If Windows Security or another antivirus product flags a file:
+
+1. Do not disable real-time protection
+2. Confirm the file came from the official repository
+3. Scan the downloaded file/folder
+4. If it is still flagged unexpectedly, open a GitHub issue and include the exact detection name
+
+A security warning should not automatically be assumed to be a false positive.
+
+## Updating Rodent Manual Scorer
+
+If you downloaded the project as a ZIP:
+
+1. Download the newest ZIP from GitHub
+2. Extract it into a new folder
+3. Keep your scoring output files separately
+4. Activate the same `rms` environment
+5. Run the newest `VideoTimerWindows.py`
+
+If `requirements.txt` has changed, run again:
+
+```bash
+python -m pip install -r requirements.txt
+```
 
 ## Troubleshooting
 
-**"conda is not recognised as a command"**
-Close the Anaconda Prompt, reopen it, and try again. If the problem persists, reinstall Anaconda and make sure you tick *"Add Anaconda3 to my PATH environment variable"* during setup.
+### `conda` is not recognised
 
-**"No module named PyQt5" or similar error**
-Make sure you see `(rms)` in your prompt before running the script. If not, run `conda activate rms` first.
+Use **Anaconda Prompt** or **Miniconda Prompt** rather than a normal Command Prompt.
 
-**The video loads but the screen stays black**
-Try converting your video to `.mp4` (H.264). Some `.avi` or `.mov` codecs are not supported by the default Windows video backend. You can use [VLC](https://www.videolan.org/) or [HandBrake](https://handbrake.fr/) (both free) to convert.
+### `ModuleNotFoundError`
 
-**The app asks me to enter FPS manually**
-Some video files do not store their frame rate. Check the video properties (right-click the file → Properties → Details tab) and enter the correct FPS value when prompted.
-
-**The window title bar shows an error about Microsoft Visual C++**
-Install the [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) (x64 version) and restart your computer.
-
-**Antivirus blocks the script from running**
-This is a false positive. Add an exception for the `RodentManualScorer` folder in your antivirus settings, or temporarily disable real-time protection while running the tool.
-
----
-
-## Updating
-
-To get a new version of the tool, download the latest ZIP from GitHub and replace the old files. Your saved CSV data will not be affected.
-
-To update the Python packages:
+Make sure `(rms)` is visible, then run:
 
 ```bash
-conda activate rms
-pip install --upgrade opencv-python-headless numpy pandas openpyxl xlsxwriter
+python -m pip install -r requirements.txt
 ```
+
+### The application does not open
+
+From the project folder, run:
+
+```bash
+python VideoTimerWindows.py
+```
+
+Copy the complete error shown in the prompt when opening a GitHub issue.
+
+### A video does not open or playback is unusual
+
+Try a standard H.264 `.mp4`.
+
+Rodent Manual Scorer includes Windows-specific video-backend handling, but codec support still depends on the video and the OpenCV/FFmpeg build installed with Python.
+
+### Excel export fails
+
+Make sure the environment is active, then reinstall the requirements:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+## Getting help
+
+If the problem persists, open an issue on the RodentManualScorer GitHub repository and include:
+
+- Windows version
+- Python version shown by `python --version`
+- full error text
+- video extension and, if known, codec
+- whether the problem occurs with more than one video

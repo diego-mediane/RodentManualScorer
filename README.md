@@ -7,7 +7,7 @@
 A free, open-source desktop tool for fast, precise, manual scoring of behaviour in video recordings.
 
 [![CI](https://github.com/diego-mediane/RodentManualScorer/actions/workflows/ci.yml/badge.svg)](https://github.com/diego-mediane/RodentManualScorer/actions/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.11%20recommended-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-555555)](#which-script-should-i-use)
 [![Licence](https://img.shields.io/badge/licence-Non--Commercial%20Academic-1f6feb)](LICENSE)
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.bbr.2026.116300-fa7343)](https://doi.org/10.1016/j.bbr.2026.116300)
@@ -85,10 +85,10 @@ Step-by-step guides, written for people who have never used Python before:
 - [Installation guide for macOS](INSTALL_MAC.md)
 - [Installation guide for Windows](INSTALL_WINDOWS.md)
 
-In short, with Python 3.9 or newer:
+Python 3.11 is recommended. The platform-specific guides below use a small isolated environment so the scorer does not interfere with other Python software.
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ---

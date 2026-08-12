@@ -1,129 +1,175 @@
-# Installation Guide — macOS
+# Rodent Manual Scorer — macOS installation
 
-This guide will take you from a fresh Mac to a working installation of **Rodent Manual Scorer**, even if you have never used Python before. Follow every step in order.
+This guide is written for users who do not normally use Python.
 
----
+## What you need
 
-## What you will install
+- macOS
+- Internet access for the initial installation
+- The Rodent Manual Scorer repository downloaded from GitHub
+- Python 3.11 in an isolated environment
 
-| Software | Purpose |
-|---|---|
-| Anaconda | Manages Python and all required packages |
-| Python 3.11 | The programming language the tool runs on |
-| PyQt5, OpenCV, NumPy, pandas, openpyxl | Libraries the tool depends on |
+The macOS script is:
 
----
+`VideoTimer.py`
 
-## Step 1 — Install Anaconda
+## 1. Download the project
 
-1. Open your browser and go to: **https://www.anaconda.com/download**
-2. Click **Download** — it will detect that you are on a Mac automatically.
-   - If you have an **Apple Silicon Mac** (M1/M2/M3/M4 chip), choose the **Apple Silicon** installer.
-   - If you have an **older Intel Mac**, choose the **Intel** installer. (Not sure? Click the Apple menu → *About This Mac*.)
-3. Open the downloaded `.pkg` file and follow the installer prompts. Accept all defaults.
-4. When installation is complete, open **Launchpad** (the rocket icon in your Dock) and search for **Anaconda Navigator** to confirm it installed correctly.
+On the GitHub repository page:
 
----
+1. Click **Code**
+2. Click **Download ZIP**
+3. Open the downloaded ZIP
+4. Move the extracted folder somewhere easy to find, for example your Desktop
 
-## Step 2 — Open the Anaconda Prompt (Terminal)
+GitHub may call the extracted folder `RodentManualScorer-main`. That is normal.
 
-1. Open **Launchpad** and search for **Terminal**, or open **Finder → Applications → Utilities → Terminal**.
-2. You will see a window with a command prompt. This is where you will type the commands below.
+## 2. Install Miniconda
 
-> **Tip:** Copy each command exactly as written, paste it into the Terminal with `Cmd+V`, and press `Enter` to run it.
+Download and install Miniconda for macOS from the official Anaconda/Miniconda website.
 
----
+Choose the installer that matches your Mac:
 
-## Step 3 — Create a dedicated environment
+- **Apple silicon** for M1/M2/M3/M4 and newer Apple chips
+- **Intel** for older Intel Macs
 
-It is best practice to keep Rodent Manual Scorer in its own isolated environment so it does not interfere with other Python projects.
+After installation, open **Terminal**.
+
+## 3. Create a clean Python 3.11 environment
+
+In Terminal, run:
 
 ```bash
-conda create -n rms python=3.11 -y
+conda create -n rms python=3.11 pip -y
 ```
 
-This creates a new environment called `rms` running Python 3.11. It may take a minute.
-
----
-
-## Step 4 — Activate the environment
+Then activate it:
 
 ```bash
 conda activate rms
 ```
 
-You will see `(rms)` appear at the start of your prompt. **You must do this every time you open a new Terminal before running the tool.**
+You should now see `(rms)` near the start of the Terminal line.
 
----
+You normally only create this environment once.
 
-## Step 5 — Install the required packages
+## 4. Go to the Rodent Manual Scorer folder
 
-Run these two commands one at a time:
+The easiest method is:
 
-```bash
-conda install -c conda-forge pyqt -y
-```
+1. Type `cd ` in Terminal, including the space
+2. Drag the extracted RodentManualScorer folder from Finder into the Terminal window
+3. Press **Return**
 
-```bash
-pip install opencv-python-headless numpy pandas openpyxl xlsxwriter
-```
-
-Wait for each command to finish before running the next.
-
----
-
-## Step 6 — Download the tool
-
-1. Go to: **https://github.com/diego-mediane/RodentManualScorer**
-2. Click the green **Code** button → **Download ZIP**
-3. Open your **Downloads** folder and double-click the ZIP file to extract it.
-4. Move the extracted folder somewhere easy to find, such as your **Desktop** or **Documents** folder.
-
----
-
-## Step 7 — Run the tool
-
-1. In Terminal, navigate to the folder you just extracted. For example, if you put it on your Desktop:
+For example:
 
 ```bash
-cd ~/Desktop/RodentManualScorer
+cd /Users/yourname/Desktop/RodentManualScorer-main
 ```
 
-2. Make sure your environment is active (you should see `(rms)` in the prompt — if not, run `conda activate rms` first).
+## 5. Install the required packages
 
-3. Run the tool:
+With `(rms)` active and Terminal inside the project folder, run:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Wait until installation finishes.
+
+## 6. Start Rodent Manual Scorer
+
+Run:
 
 ```bash
 python VideoTimer.py
 ```
 
-The application window should open. You are ready to score.
+The application window should open.
 
----
+## Every time you want to use it later
 
-## Troubleshooting
-
-**"conda: command not found"**
-Close Terminal completely, reopen it, and try again. If the problem persists, reinstall Anaconda and tick the box that says *"Add to PATH"* during installation.
-
-**"No module named PyQt5" or similar**
-Make sure you activated the environment (`conda activate rms`) before running the script.
-
-**The video loads but shows a black screen**
-Try a different video format. `.mp4` files encoded with H.264 work most reliably on macOS.
-
-**The app asks me to enter FPS manually**
-Some video files do not store their frame rate. Check the video's properties (right-click → Get Info) and enter the correct FPS when prompted.
-
----
-
-## Updating
-
-To get a new version of the tool, download the latest ZIP from GitHub and replace the old files. Your data (CSV files) will not be affected.
-
-To update the Python packages:
+Open Terminal and run:
 
 ```bash
 conda activate rms
-pip install --upgrade opencv-python-headless numpy pandas openpyxl xlsxwriter
 ```
+
+Then move into the RodentManualScorer folder and run:
+
+```bash
+python VideoTimer.py
+```
+
+## Supported video files
+
+The scorer accepts:
+
+- `.mp4`
+- `.avi`
+- `.mov`
+- `.mkv`
+
+Whether a particular file opens also depends on the codec used inside that video. If one video does not open, try converting a copy to a standard H.264 `.mp4` while keeping the original recording unchanged.
+
+## macOS security message
+
+If macOS blocks the script because it was downloaded from the internet, first confirm that you downloaded the files from the official RodentManualScorer GitHub repository.
+
+You may then need to allow the application/script in **System Settings → Privacy & Security**.
+
+Do not disable macOS security protections globally.
+
+## Updating Rodent Manual Scorer
+
+If you downloaded the project as a ZIP:
+
+1. Download the newest ZIP from GitHub
+2. Extract it into a new folder
+3. Keep your old scoring output files separately
+4. Activate the same `rms` environment
+5. Run the newest `VideoTimer.py`
+
+If `requirements.txt` has changed, run again:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+## Troubleshooting
+
+### `conda: command not found`
+
+Close Terminal and reopen it after installing Miniconda.
+
+### `ModuleNotFoundError`
+
+Make sure `(rms)` is visible in Terminal, then run:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### The window does not open
+
+From the project folder, run:
+
+```bash
+python VideoTimer.py
+```
+
+Read the error shown in Terminal and include that text when opening a GitHub issue.
+
+### A video will not open
+
+Try another known-good `.mp4` first. If that works, the problem is probably the codec of the original video rather than the scorer itself.
+
+## Getting help
+
+If the problem persists, open an issue on the RodentManualScorer GitHub repository and include:
+
+- your macOS version
+- whether the Mac is Apple silicon or Intel
+- the Python version shown by `python --version`
+- the full Terminal error
+- the video extension and, if known, codec
